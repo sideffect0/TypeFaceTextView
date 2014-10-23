@@ -1,7 +1,9 @@
 TypeFaceTextView
 ================
 
-Custom TextView For Android
+TextView with Custom Font For Android
+
+Keep UI Things in XML not in Code :)  
 
 Setup Instructions
 ------------------
