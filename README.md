@@ -10,7 +10,7 @@ Setup Instructions
 
  2.Add (i) xmlns:app="http://schemas.android.com/apk/res/com.nubicz.typefacetextview" to Root layout 
 
-       (ii) add path to font fron assets folder to typeface attribute
+       <!-- (ii) add path to font fron assets folder to typeface attribute -->
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                         xmlns:app="http://schemas.android.com/apk/res/com.nubicz.typefacetextview">
