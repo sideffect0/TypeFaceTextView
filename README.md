@@ -11,7 +11,6 @@ Setup Instructions
    (i) xmlns:app="http://schemas.android.com/apk/res/com.nubicz.typefacetextview" to root layout 
    (ii) add path to font fron assets folder to typeface attribute
 
-    Example :
   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res/com.nubicz.typefacetextview">
@@ -19,8 +18,8 @@ Setup Instructions
       <com.nubicz.customviews.TypeFaceTextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello"
-        android:textSize="40sp"
+        android:text="Hello World"
+        android:textSize="40sp" <!-- All Other Attributes Are Still Working :) -->
         android:layout_centerInParent="true"
         app:typeface="fonts/myfont.ttf"/>
 
