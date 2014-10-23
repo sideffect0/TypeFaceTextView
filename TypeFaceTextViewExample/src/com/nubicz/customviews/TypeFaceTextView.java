@@ -19,21 +19,26 @@ public class TypeFaceTextView extends TextView{
 	
     public TypeFaceTextView(Context context,AttributeSet attrs) {
     	super(context, attrs);
-    	TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.TypeFaceTextView);
-    	data = ta.getString(R.styleable.TypeFaceTextView_typeface);
-    	init(context,data);
+    	init(context,attrs);
 	}
     
     public TypeFaceTextView(Context context, AttributeSet attrs, int defStyle){
     	super(context, attrs, defStyle);
-    	TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.TypeFaceTextView);
-    	data = ta.getString(R.styleable.TypeFaceTextView_typeface);
-    	init(context,data);
+    	init(context,attrs);
     }
     
-    public void init(Context context,String data){
-    	Typeface tf =  Typeface.createFromAsset(context.getAssets(),data);
-    	this.setTypeface(tf);
+    public void init(Context context,AttributeSet attrs){
+    	
+    	TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.TypeFaceTextView);
+    	data = ta.getString(R.styleable.TypeFaceTextView_typeface);
+    	
+    	if((data == null) || (data.length() == 0)){
+             ta.recycle();
+             return;
+         }
+    	 
+    	 Typeface tf =  Typeface.createFromAsset(context.getAssets(),data);
+    	 this.setTypeface(tf);
     }
     
 	
