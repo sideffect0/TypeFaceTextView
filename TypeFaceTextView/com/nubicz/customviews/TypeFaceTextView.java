@@ -32,8 +32,19 @@ public class TypeFaceTextView extends TextView{
             if(mIndex <= mText.length()) {
                 mHandler.postDelayed(characterAdder, mDelay);
             }
+            if(mIndex == mText.length()){
+            	mHandler.postDelayed(animationAdder, mDelay);
+            }
         }
     };
+    
+    private Runnable animationAdder = new Runnable() {
+		
+		@Override
+		public void run() {
+        	setAnimation(animation);			
+		}
+	};
     
 	public TypeFaceTextView(Context context) {
 		super(context);
