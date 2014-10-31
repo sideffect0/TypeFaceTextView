@@ -49,6 +49,11 @@ public class TypeFaceTextView extends TextView{
     	
     }
     
+    public void setTypeface(String path){
+    	Typeface tf =  TypeFaceCache.getFont(getContext(), path);
+    	this.setTypeface(tf);
+    }
+    
 	
     
 }
