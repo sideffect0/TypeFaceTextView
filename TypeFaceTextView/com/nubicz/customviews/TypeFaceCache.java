@@ -11,12 +11,15 @@ public class TypeFaceCache {
   public static HashMap<String,Typeface> pCache = null;
   
   public static Typeface getFont(Context context,String path){
+	  
 	  if(pCache == null){
 		  pCache = new HashMap<String, Typeface>();
 	  }
 	  if(pCache.get(path) == null){
-		  
+		  Typeface  tf = Typeface.createFromAsset(context.getAssets(),path);
+		  pCache.put(path,tf);
 	  }
-	  Typeface.createFromAsset(context.getAssets(),path);
+	  
+	  return pCache.get(path);
   }
 }
