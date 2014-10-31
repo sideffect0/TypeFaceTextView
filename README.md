@@ -33,5 +33,5 @@ Added FontCache
 
 LICENSE
 ------
-The `project` is under GPLV3 
+The `project` is under MIT LICENSE 
 
