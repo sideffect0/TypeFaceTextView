@@ -17,6 +17,7 @@
         android:textSize="40sp"
         android:textStyle="bold"
         android:layout_centerInParent="true"
+        android:textColor="#ff0000"
         app:typeface="fonts/myfont.ttf"/>
 
 </RelativeLayout>
