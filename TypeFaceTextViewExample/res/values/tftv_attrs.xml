@@ -3,5 +3,6 @@
    <declare-styleable name="TypeFaceTextView">         
         <attr name="customFont" format="string" />
         <attr name="typeEffect" format="boolean" />
+        <attr name="typeEffectDelay" format="integer"/>
     </declare-styleable> 
 </resources>
