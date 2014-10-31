@@ -2,5 +2,6 @@
 <resources>
    <declare-styleable name="TypeFaceTextView">         
         <attr name="customFont" format="string" />
+        <attr name="typeEffect" format="boolean" />
     </declare-styleable> 
 </resources>
