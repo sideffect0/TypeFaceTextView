@@ -29,4 +29,9 @@ Setup Instructions
 
    an Example Project Also Included You Can Check it Out ... :)
 
-Added FontCache
+Added FontCache 
+
+LICENSE
+------
+The `project` is under GPLV3 
+
