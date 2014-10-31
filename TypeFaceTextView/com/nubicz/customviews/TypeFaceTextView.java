@@ -5,7 +5,9 @@ import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.os.Handler;
 import android.util.AttributeSet;
+import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.TextView;
 
 import com.nubicz.typefacetextview.R;
@@ -17,8 +19,8 @@ public class TypeFaceTextView extends TextView{
 	public Integer mDelay = 500;
 	private int mIndex = 0;
 	public CharSequence mText = "";
-	protected AlphaAnimation fadeIn = new AlphaAnimation(0.0f , 1.0f ) ; 
-	protected AlphaAnimation fadeOut = new AlphaAnimation( 1.0f , 0.0f ) ; 
+	protected AlphaAnimation fadeIn = null; 
+	protected AlphaAnimation fadeOut = null;
 	
 	private Handler mHandler = new Handler();
     private Runnable characterAdder = new Runnable() {
@@ -28,8 +30,6 @@ public class TypeFaceTextView extends TextView{
             if(mIndex <= mText.length()) {
                 mHandler.postDelayed(characterAdder, mDelay);
             }
-            fadeIn.setInterpolator(new DecelerateInterpolator()); //add this
-            fadeIn.setDuration(1000);
         }
     };
     
@@ -71,6 +71,15 @@ public class TypeFaceTextView extends TextView{
     	mText = getText();
     	mIndex = 0;
     	setText("");
+    	
+    	fadeIn = new AlphaAnimation(0.0f , 1.0f ) ;
+    	fadeOut = new AlphaAnimation( 1.0f , 0.0f ) ; 
+    	
+        fadeIn.setInterpolator(new DecelerateInterpolator()); //add this
+        fadeIn.setDuration(1000);
+        fadeOut.setInterpolator(new AccelerateInterpolator()); //and this
+        fadeOut.setStartOffset(1000);
+        fadeOut.setDuration(1000);
     	mHandler.removeCallbacks(characterAdder);
     	mHandler.postDelayed(characterAdder, mDelay);
     }
