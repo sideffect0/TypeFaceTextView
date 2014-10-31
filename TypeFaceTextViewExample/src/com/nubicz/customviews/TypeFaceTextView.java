@@ -12,6 +12,7 @@ import com.nubicz.typefacetextview.R;
 public class TypeFaceTextView extends TextView{
 
 	public String data = null;
+	public Boolean is_animate = true;
 	
 	public TypeFaceTextView(Context context) {
 		super(context);
@@ -30,8 +31,8 @@ public class TypeFaceTextView extends TextView{
     public void init(Context context,AttributeSet attrs){
     	
     	TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.TypeFaceTextView);
-    	data = ta.getString(R.styleable.TypeFaceTextView_typeface);
-    	
+    	data = ta.getString(R.styleable.TypeFaceTextView_customFont);
+    	is_animate = ta.getBoolean(R.styleable.TypeFaceTextView_typeEffect, false);
     	if((data == null) || (data.length() == 0)){
              ta.recycle();
              return;
