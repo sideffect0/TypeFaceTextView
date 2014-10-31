@@ -8,7 +8,7 @@ Keep UI Things in XML not in Code :)
 Setup Instructions
 ------------------
 
- 1.From `TypeFaceTextView` Folder Copy the `TypeFaceTextView.java` to `src` folder and `tftv_attrs.xml` to your project's res/values/ folder
+ 1.From `TypeFaceTextView` Folder Copy the `TypeFaceTextView.java` and `TypeFaceCache` to `src` folder and `tftv_attrs.xml` to your project's res/values/ folder
 
  2.Add (i) xmlns:app="http://schemas.android.com/apk/res/com.nubicz.typefacetextview" to Root layout 
 
