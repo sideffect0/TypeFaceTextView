@@ -31,6 +31,12 @@ Setup Instructions
 
 Added FontCache 
 
+
+Features
+-------
+Added Animation Effect Option to TextView
+Waiting for user review to remove it or not
+
 LICENSE
 ------
 The `project` is under MIT LICENSE 
