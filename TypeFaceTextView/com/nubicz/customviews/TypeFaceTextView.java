@@ -105,6 +105,10 @@ public class TypeFaceTextView extends TextView{
     	this.setTypeface(tf);
     }
     
+    public void setTypeEffectDelay(Integer delay){
+    	mDelay = delay;
+    }
+    
 	
     
 }
