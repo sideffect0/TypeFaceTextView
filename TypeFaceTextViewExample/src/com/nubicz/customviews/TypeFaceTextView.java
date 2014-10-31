@@ -80,7 +80,7 @@ public class TypeFaceTextView extends TextView{
     	}
     }
     
-    public void animateText(){
+    private void animateText(){
     	mText = getText();
     	mIndex = 0;
     	setText("");
@@ -105,6 +105,13 @@ public class TypeFaceTextView extends TextView{
     	this.setTypeface(tf);
     }
     
+    public void setTypeEffectDelay(Integer delay){
+    	mDelay = delay;
+    }
+    
+    public void startAnimation(){
+    	animateText();
+    }
 	
     
 }
