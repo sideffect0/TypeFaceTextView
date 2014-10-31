@@ -28,3 +28,5 @@ Setup Instructions
         </RelativeLayout>
 
    an Example Project Also Included You Can Check it Out ... :)
+
+Added FontCache

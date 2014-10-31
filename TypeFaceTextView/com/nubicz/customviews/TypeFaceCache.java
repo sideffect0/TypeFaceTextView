@@ -1,4 +1,4 @@
 class TypeFaceCache{
-  private HashMap<>
+  private HashMap<String,TypeFace>
 
 }

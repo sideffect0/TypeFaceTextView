@@ -1,0 +1,5 @@
+#!/bin/bash
+cp "/home/renlinx/Desktop/all\ screens/OPEN_WS/TypeFaceTextViewExample/src/com/nubicz/customviews/TypeFaceCache.java" "TypeFaceTextView/com/nubicz/customviews/TypeFaceCache.java"
+git add .
+#git commit -m ${1}
+git push
