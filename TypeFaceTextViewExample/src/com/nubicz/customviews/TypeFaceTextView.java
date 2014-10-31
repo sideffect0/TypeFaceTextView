@@ -39,6 +39,14 @@ public class TypeFaceTextView extends TextView{
     	}  	 
     	Typeface tf =  TypeFaceCache.getFont(getContext(), data);
     	this.setTypeface(tf);
+    	//Set for animation
+    	if(is_animate){
+    		animateText();
+    	}
+    }
+    
+    public void animateText(){
+    	
     }
     
 	
