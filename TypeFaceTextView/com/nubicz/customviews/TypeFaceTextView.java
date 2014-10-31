@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
+import android.view.animation.AnimationSet;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ public class TypeFaceTextView extends TextView{
 	public CharSequence mText = "";
 	protected AlphaAnimation fadeIn = null; 
 	protected AlphaAnimation fadeOut = null;
+	protected AnimationSet animation;
 	
 	private Handler mHandler = new Handler();
     private Runnable characterAdder = new Runnable() {
@@ -82,6 +84,9 @@ public class TypeFaceTextView extends TextView{
         fadeOut.setDuration(1000);
     	mHandler.removeCallbacks(characterAdder);
     	mHandler.postDelayed(characterAdder, mDelay);
+    	animation = new AnimationSet(false);
+    	animation.addAnimation(fadeIn);
+    	animation.addAnimation(fadeOut);
     }
     
     public void setTypeface(String path){
