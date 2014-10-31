@@ -3,9 +3,9 @@ package com.nubicz.customviews;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
+import android.os.Handler;
 import android.util.AttributeSet;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.nubicz.typefacetextview.R;
 
@@ -13,8 +13,21 @@ public class TypeFaceTextView extends TextView{
 
 	public String data = null;
 	public Boolean is_animate = false;
-	public Integer animate_delay = 500;
+	public Integer mDelay = 500;
+	private int mIndex = 0;
+	public String mText = "";
 	
+	private Handler mHandler = new Handler();
+    private Runnable characterAdder = new Runnable() {
+        @Override
+        public void run() {
+            setText(mText.subSequence(0, mIndex++));
+            if(mIndex <= mText.length()) {
+                mHandler.postDelayed(characterAdder, mDelay);
+            }
+        }
+    };
+    
 	public TypeFaceTextView(Context context) {
 		super(context);
 	}
@@ -34,7 +47,7 @@ public class TypeFaceTextView extends TextView{
     	TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.TypeFaceTextView);
     	data = ta.getString(R.styleable.TypeFaceTextView_customFont);
     	is_animate = ta.getBoolean(R.styleable.TypeFaceTextView_typeEffect, false);
-    	animate_delay = ta.getInteger(R.styleable.TypeFaceTextView_typeEffectDelay,500);
+    	mDelay = ta.getInteger(R.styleable.TypeFaceTextView_typeEffectDelay,500);
     	if((data == null) || (data.length() == 0)){
              ta.recycle();
              return;
@@ -48,7 +61,7 @@ public class TypeFaceTextView extends TextView{
     }
     
     public void animateText(){
-    	
+
     }
     
     public void setTypeface(String path){
