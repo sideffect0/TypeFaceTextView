@@ -28,6 +28,8 @@ public class TypeFaceTextView extends TextView{
             if(mIndex <= mText.length()) {
                 mHandler.postDelayed(characterAdder, mDelay);
             }
+            fadeIn.setInterpolator(new DecelerateInterpolator()); //add this
+            fadeIn.setDuration(1000);
         }
     };
     
