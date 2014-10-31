@@ -50,7 +50,6 @@ public class TypeFaceTextView extends TextView{
     	data = ta.getString(R.styleable.TypeFaceTextView_customFont);
     	is_animate = ta.getBoolean(R.styleable.TypeFaceTextView_typeEffect, false);
     	mDelay = ta.getInteger(R.styleable.TypeFaceTextView_typeEffectDelay,500);
-    	final ScrollView sv = new ScrollView(context);
     	
     	if((data == null) || (data.length() == 0)){
              ta.recycle();
