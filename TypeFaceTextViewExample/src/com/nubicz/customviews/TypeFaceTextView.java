@@ -35,10 +35,9 @@ public class TypeFaceTextView extends TextView{
     	if((data == null) || (data.length() == 0)){
              ta.recycle();
              return;
-         }
-    	 
-    	 Typeface tf =  Typeface.createFromAsset(context.getAssets(),data);
-    	 this.setTypeface(tf);
+    	}  	 
+    	Typeface tf =  TypeFaceCache.getFont(getContext(), data);
+    	this.setTypeface(tf);
     }
     
 	
