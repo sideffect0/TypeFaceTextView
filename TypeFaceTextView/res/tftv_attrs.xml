@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
    <declare-styleable name="TypeFaceTextView">         
-        <attr name="typeface" format="string" />
+        <attr name="customFont" format="string" />
+        <attr name="typeEffect" format="boolean" />
+        <attr name="typeEffectDelay" format="integer"/>
     </declare-styleable> 
 </resources>
