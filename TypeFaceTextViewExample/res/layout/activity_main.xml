@@ -18,6 +18,6 @@
         android:textStyle="bold"
         android:layout_centerInParent="true"
         android:textColor="#ff0000"
-        app:typeface="fonts/myfont.ttf"/>
+        app:customFont="fonts/myfont.ttf"/>
 
 </RelativeLayout>
