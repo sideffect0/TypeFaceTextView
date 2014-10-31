@@ -12,7 +12,11 @@ public class TypeFaceCache {
   
   public static Typeface getFont(Context context,String path){
 	  if(pCache == null){
-		  pCache = Typeface.createFromAsset(context.getAssets(),path);
+		  pCache = new HashMap<String, Typeface>();
 	  }
+	  if(pCache.get(path) == null){
+		  
+	  }
+	  Typeface.createFromAsset(context.getAssets(),path);
   }
 }
