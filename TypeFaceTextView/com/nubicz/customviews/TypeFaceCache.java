@@ -7,7 +7,7 @@ import android.graphics.Typeface;
 
 public class TypeFaceCache {
 	
-  private static HashMap<String,Typeface> pCache = null;
+  public static HashMap<String,Typeface> pCache = null;
   
   public static Typeface getFont(1String path){
 	  if(pCache == null){
