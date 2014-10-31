@@ -37,6 +37,8 @@ Features
 Added Animation Effect Option to TextView
 Waiting for user review to remove it or not
 
+Please Give your suggestions
+
 LICENSE
 ------
 The `project` is under MIT LICENSE 
