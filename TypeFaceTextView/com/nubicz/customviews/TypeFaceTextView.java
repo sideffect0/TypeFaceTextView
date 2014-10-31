@@ -5,7 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.os.Handler;
 import android.util.AttributeSet;
-import android.widget.ScrollView;
+import android.view.animation.AlphaAnimation;
 import android.widget.TextView;
 
 import com.nubicz.typefacetextview.R;
@@ -17,6 +17,8 @@ public class TypeFaceTextView extends TextView{
 	public Integer mDelay = 500;
 	private int mIndex = 0;
 	public CharSequence mText = "";
+	protected AlphaAnimation fadeIn = new AlphaAnimation(0.0f , 1.0f ) ; 
+	protected AlphaAnimation fadeOut = new AlphaAnimation( 1.0f , 0.0f ) ; 
 	
 	private Handler mHandler = new Handler();
     private Runnable characterAdder = new Runnable() {
