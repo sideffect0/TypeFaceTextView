@@ -18,6 +18,8 @@
         android:textStyle="bold"
         android:layout_centerInParent="true"
         android:textColor="#ff0000"
-        app:customFont="fonts/myfont.ttf"/>
+        app:customFont="fonts/myfont.ttf"
+        app:typeEffect="true"
+        app:typeEffectDelay="500"/>
 
 </RelativeLayout>
