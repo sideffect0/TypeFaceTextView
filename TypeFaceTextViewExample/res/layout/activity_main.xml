@@ -13,8 +13,9 @@
     <com.nubicz.customviews.TypeFaceTextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello"
+        android:text="@string/hello_world"
         android:textSize="40sp"
+        android:textStyle="bold"
         android:layout_centerInParent="true"
         app:typeface="fonts/myfont.ttf"/>
 
