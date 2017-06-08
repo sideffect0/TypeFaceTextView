@@ -1,3 +1,5 @@
+DEPRECATED: Use new android support lib which has `android:font` support   
+
 TypeFaceTextView
 ================
 
